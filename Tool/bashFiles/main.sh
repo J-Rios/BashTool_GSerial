@@ -19,6 +19,6 @@ echo 'ExecStartPre=-/bin/sh -c "echo 2 > /sys/bus/platform/devices/sunxi_usb_udc
 
 systemctl --no-reload enable serial-getty@ttyGS0.service
 
-whiptail --title "BashTool_GSerial" --msgbox "Patch successfully apply. It is necessary reboot the system." 10 60 0
+whiptail --title "BashTool_GSerial" --msgbox "Patch successfully applied. It is necessary reboot the system." 10 60 0
 
 reboot
