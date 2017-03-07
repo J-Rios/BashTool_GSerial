@@ -6,10 +6,6 @@
 # Global Parameters
 set -e # No errors allowed
 
-# Context
-PWD=`pwd`
-LOG="$PWD/log.txt"
-
 #############################
 
 whiptail --title "BashTool_GSerial" --msgbox "Setting USB OTG in G_Serial mode..." 10 60 0
