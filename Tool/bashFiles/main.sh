@@ -17,7 +17,8 @@ mkdir -p /etc/systemd/system/serial-getty@ttyGS0.service.d
 echo "[Service]" > /etc/systemd/system/serial-getty@ttyGS0.service.d/10-switch-role.conf
 echo 'ExecStartPre=-/bin/sh -c "echo 2 > /sys/bus/platform/devices/sunxi_usb_udc/otg_role"' >> /etc/systemd/system/serial-getty@ttyGS0.service.d/10-switch-role.conf
 
-systemctl --no-reload enable serial-getty@ttyGS0.service
+#systemctl --no-reload enable serial-getty@ttyGS0.service
+ln -sf /etc/systemd/system/getty.target.wants/serial-getty@ttyGS0.service /lib/systemd/system/serial-getty@.service
 
 whiptail --title "BashTool_GSerial" --msgbox "Patch successfully applied. It is necessary reboot the system." 10 60 0
 
